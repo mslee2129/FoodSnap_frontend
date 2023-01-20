@@ -28,7 +28,7 @@ type checks:
   stage: linting
   interruptible: true
   script:
-    - mypy food_snap/* --strict --exclude food_snap/frontend/
+    - mypy . --strict --exclude food_snap/frontend/ --exclude tests/
 
 format checks:
   stage: linting
