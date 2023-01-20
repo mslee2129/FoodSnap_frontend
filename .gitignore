@@ -180,3 +180,6 @@ food_snap/frontend/coverage
 
 # frontend production
 food_snap/frontend/build
+
+#frontend packages (too large)
+food_snap/frontend/package-lock.json
