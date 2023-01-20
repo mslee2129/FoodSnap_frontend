@@ -28,7 +28,7 @@ type checks:
   stage: linting
   interruptible: true
   script:
-    - mypy app/* --strict
+    - mypy food_snap/* --strict
 
 format checks:
   stage: linting
@@ -40,7 +40,7 @@ unit tests:
   stage: testing
   interruptible: true
   script:
-    - pytest --junitxml=report.xml --cov=app/ --cov-report term-missing tests/
+    - pytest --junitxml=report.xml --cov=food_snap/ --cov-report term-missing tests/
     - coverage xml
   coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
   artifacts:
