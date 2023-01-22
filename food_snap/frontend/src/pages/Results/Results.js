@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import logo from '../../resources/logo_512.png';
+import React from 'react';
 import './Results.css';
+import Navigation from '../../elements/Navigation/Navigation';
 
 function Results() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>
-          Results
+          Results placeholder
         </h1>
-        <img src={logo} className="App-logo" alt="logo" />
       </header>
+      <Navigation />
     </div>
   );
 }
