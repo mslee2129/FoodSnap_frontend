@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../resources/logo_512.png';
 import Navigation from '../../elements/Navigation/Navigation';
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Results from '../Results/Results';
 import './Home.css';
 // needs to installed
@@ -38,6 +38,13 @@ function Home() {
 
   return (
     <div className="App">
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path='/' exact element={<Home/>} />
+          <Route path='/results' element={<Results/>} />
+        </Routes>
+      </Router>
       <header className="App-header">
         <h1>
           Welcome to FoodSnap!
@@ -51,9 +58,7 @@ function Home() {
           <button type="submit">Upload</button>
         </form>
       </header>
-      <Navigation />
     </div>
-
   );
 }
 
