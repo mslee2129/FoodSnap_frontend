@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import logo from './logo_512.png';
-import './App.css';
+import logo from '../../resources/logo_512.png';
+import Navigation from '../../elements/Navigation/Navigation';
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import Results from '../Results/Results';
+import './Home.css';
 // needs to installed
 import axios from 'axios'
 
-function App() {
+function Home() {
   // setFile is function used to update the file variable
   const [file, setFile] = useState()
 
@@ -48,8 +51,10 @@ function App() {
           <button type="submit">Upload</button>
         </form>
       </header>
+      <Navigation />
     </div>
+
   );
 }
 
-export default App;
+export default Home;
