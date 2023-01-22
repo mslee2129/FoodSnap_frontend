@@ -20,7 +20,7 @@ pip install pipenv
 
 ### Virtual Environment
 
-Creat virtual environment and install dependencies listed in [`Pipfile`](Pipfile) (including `dev` dependencies):
+Create virtual environment and install dependencies listed in [`Pipfile`](Pipfile) (including `dev` dependencies):
 ```
 pipenv install --dev
 ```
@@ -38,4 +38,20 @@ deactivate
 Delete environment:
 ```
 pipenv --rm
+```
+
+### React Frontend
+
+Install Node.js (use one of the commands listed on website) https://nodejs.dev/en/download/package-manager/
+
+Start server using (while in frontend directory)
+```
+npm start
+```
+
+Download node_modules from OneDrive
+
+Install axios
+```
+npm install axios
 ```
