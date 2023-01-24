@@ -1,8 +1,9 @@
-import { Routes, Route } from "react-router-dom"
-import Home from './pages/Home/Home';
-import Results from './pages/Results/Results';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home/Home'
+import Results from './pages/Results/Results'
 
-function App() {
+function App () {
   return (
     <div className="App">
       <Routes>
@@ -15,5 +16,3 @@ function App() {
 }
 
 export default App
-
-

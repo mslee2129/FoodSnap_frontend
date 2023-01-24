@@ -5,7 +5,6 @@ __pycache__/
 
 # C extensions
 *.so
-
 .DS_Store
 
 # Distribution / packaging
@@ -171,15 +170,12 @@ yarn-debug.log*
 yarn-error.log*
 
 # frontend dependencies
-food_snap/frontend/node_modules
-food_snap/frontend/.pnp
-food_snap/frontend/.pnp.js
+node_modules
+.pnp
+.pnp.js
 
 # frontend testing
-food_snap/frontend/coverage
+coverage
 
 # frontend production
-food_snap/frontend/build
-
-#frontend packages (too large)
-food_snap/frontend/package-lock.json
+build

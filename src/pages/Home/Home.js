@@ -1,37 +1,48 @@
-import React, { useState } from 'react';
-import logo from '../../resources/food_love.png';
-import Navigation from '../../elements/Navigation/Navigation';
-import './Home.css';
+import React, { useState } from 'react'
+import logo from '../../resources/food_love.png'
+import Navigation from '../../elements/Navigation/Navigation'
+import './Home.css'
 // needs to installed
 import axios from 'axios'
 
-function Home() {
+function Home () {
   // setFile is function used to update the file variable
   const [file, setFile] = useState()
 
+  const [responseData, setResponseData] = useState({
+    label: '',
+    value: 0
+  })
+
   // handleChange is called when a file is uploaded, and uses the event as an argument to call setFile
-  function handleUpload(event) {
+  function handleUpload (event) {
     setFile(event.target.files[0])
   }
 
-  function handleSubmit(event) {
+  function handleSubmit (event) {
     // prevents default event behaviour (auto refresh)
     event.preventDefault()
     // creates variables for HTTP request
     // url needs to be changed to our backend server
-    const url = 'https://eo259vge8sjhkes.m.pipedream.net';
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('fileName', file.name);
+    const url = 'http://127.0.0.1:5000'
+    const formData = new FormData()
+    formData.append('file', file)
+    formData.append('fileName', file.name)
     const config = {
       headers: {
-        'content-type': 'multipart/form-data',
-      },
-    };
+        'content-type': 'multipart/form-data'
+      }
+    }
     // sends HTTP POST request
-    axios.post(url, formData, config).then((response) => {
-      console.log(response.data);
-    })
+    axios.post(url, formData, config)
+      .then((response) => {
+        const res = response.data
+        console.log(response.data) // remove logging after testing
+        setResponseData(({
+          label: res.label,
+          value: res.nutrition
+        }))
+      })
   }
 
   return (
@@ -41,6 +52,11 @@ function Home() {
           Welcome to FoodSnap!
         </h1>
         <img src={logo} className="Home-logo" alt="logo" />
+        {/* display response data */}
+        <div>
+          <p>Nutrition: {responseData.label}</p>
+          <p>Value: {responseData.value}</p>
+        </div>
         {/* upload picture functionality */}
         <form onSubmit={handleSubmit}>
           <p>To start upload a picture (.png/.jpeg/.jpg) to get your calorie information!</p>
@@ -51,7 +67,7 @@ function Home() {
       </header>
       <Navigation />
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

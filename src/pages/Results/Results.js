@@ -1,8 +1,8 @@
-import React from 'react';
-import './Results.css';
-import Navigation from '../../elements/Navigation/Navigation';
+import React from 'react'
+import './Results.css'
+import Navigation from '../../elements/Navigation/Navigation'
 
-function Results() {
+function Results () {
   return (
     <div className="App">
       <header className="App-header">
@@ -12,7 +12,7 @@ function Results() {
       </header>
       <Navigation />
     </div>
-  );
+  )
 }
 
-export default Results;
+export default Results

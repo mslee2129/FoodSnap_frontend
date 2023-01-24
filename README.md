@@ -6,52 +6,17 @@ Imagine that you could show a dish to a machine learning algorithm and it would 
 
 ## Set up
 
-In this project we use Python version `3.10.8` and Pipenv for managing virtual environments (see full documentation [here](https://pipenv-fork.readthedocs.io/en/latest/basics.html)).
-
-The local environment (for development) can be set up by running [`setup.sh`](setup.sh):
+Install npm after cloning the repo
 ```
-bash setup.sh
+npm ci
 ```
-
-This assumes that `pipenv` is already installed, if not then uncomment out the section for installing this with `pip` (for Mac users you can also use `brew`) or simply run:
-```
-pip install pipenv
-```
-
-### Virtual Environment
-
-Create virtual environment and install dependencies listed in [`Pipfile`](Pipfile) (including `dev` dependencies):
-```
-pipenv install --dev
-```
-
-Activate environment:
-```
-pipenv shell
-```
-
-Exit environment:
-```
-deactivate
-```
-
-Delete environment:
-```
-pipenv --rm
-```
-
-### React Frontend
-
-Install Node.js (use one of the commands listed on website) https://nodejs.dev/en/download/package-manager/
-
-Start server using (while in frontend directory)
-```
-npm start
-```
-
-Download node_modules from OneDrive
 
 Install axios
 ```
 npm install axios
+```
+
+Start server using
+```
+npm start
 ```
