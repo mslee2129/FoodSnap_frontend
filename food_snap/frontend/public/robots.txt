@@ -1,0 +1,4 @@
+# This file prevents the overloading of requests by bots https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Disallow: /

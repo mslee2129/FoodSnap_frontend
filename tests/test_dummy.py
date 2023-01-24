@@ -1,4 +1,4 @@
-from app.dummy import is_dummy
+from food_snap.dummy import is_dummy
 
 
 def test_is_dummy():

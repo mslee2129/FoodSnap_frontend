@@ -1,0 +1,21 @@
+.Navigation {
+    height: 8vh;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+
+#home_link, #results_link {
+    column-count: 2;
+    display:inline;
+    height: 8vh;
+    width: 50%;
+    color: #F8EDE3;
+    background-color: #A2B29F;
+    text-decoration: none;
+}
+
+.logo {
+    height: 30px;
+    width: 30px;
+  }
