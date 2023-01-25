@@ -17,30 +17,3 @@
   font-size: calc(10px + 2vmin);
   color: #798777;
 }
-
-/*
-// code for link color
-
-.Home-link {
-  color: #3d8fd3;
-}
-*/
-
-/*
-// code for logo spin
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 30s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/

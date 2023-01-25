@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
-import logo from '../../resources/food_love.png';
-import Navigation from '../../elements/Navigation/Navigation';
-import './Home.css';
+import React, { useState, useEffect } from 'react'
+import logo from '../../resources/food_love.png'
+import Navigation from '../../elements/Navigation/Navigation'
+import './Home.css'
 // needs to installed
 import axios from 'axios'
 
 function Home() {
   // setFile is function used to update the file variable
   const [file, setFile] = useState()
-
   const [responseData, setResponseData] = useState()
-
   const url = 'http://127.0.0.1:5000';
 
 
@@ -43,6 +41,14 @@ function Home() {
       }))
     })
   }
+
+/* untested code - flask app not working
+  useEffect(() => {
+    if (responseData) {
+      window.location.href = '/results'
+    }
+  }, [responseData]);
+*/
 
   return (
     <div className="Home">
