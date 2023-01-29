@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 import logo from '../../resources/food_love.png'
 import Navigation from '../../elements/Navigation/Navigation'
 import './Home.css'
@@ -7,10 +8,10 @@ import axios from 'axios'
 
 function Home() {
   // setFile is function used to update the file variable
+  const navigate = useNavigate()
   const [file, setFile] = useState()
   const [responseData, setResponseData] = useState()
   const url = 'http://127.0.0.1:5000';
-
 
   // handleChange is called when a file is uploaded, and uses the event as an argument to call setFile
   function handleUpload(event) {
@@ -42,13 +43,13 @@ function Home() {
     })
   }
 
-/* untested code - flask app not working
+/*forward to results page once data is received*/
   useEffect(() => {
     if (responseData) {
-      window.location.href = '/results'
+      navigate('/results', {state:{responseData}})
     }
   }, [responseData]);
-*/
+  
 
   return (
     <div className="Home">
@@ -58,12 +59,6 @@ function Home() {
         </h1>
         <img src={logo} className="Home-logo" alt="logo" />
         {/* upload picture functionality */}
-        {responseData && <div>
-          <p>Food: {responseData.label}</p>
-          <p>Calories: {responseData.nutrition.ENERC_KCAL}</p>
-          <p>Fat: {responseData.nutrition.FAT}</p>
-          <p>Protein: {responseData.nutrition.PROCNT}</p>
-        </div>}
         <form onSubmit={handleSubmit}>
           <p>To start upload a picture (.png/.jpeg/.jpg) to get your calorie information!</p>
           {/* restricts file type to png, jpeg, jpg from upload window and calls upload event handler */}
