@@ -1,1 +1,14 @@
-#to do
+image: node:latest
+
+stages:
+  - test
+
+
+before_script:
+  #clean install
+  - npm ci
+
+test:
+  stage: test
+  script:
+  #- npm test

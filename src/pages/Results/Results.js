@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom'
 import Navigation from '../../elements/Navigation/Navigation'
 
 function Results () {
-
   const location = useLocation()
 
   return (
