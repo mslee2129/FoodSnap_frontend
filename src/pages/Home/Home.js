@@ -4,14 +4,14 @@ import logo from '../../resources/food_love.png'
 import Navigation from '../../elements/Navigation/Navigation'
 import './Home.css'
 // needs to installed
-import axios from 'axios'
+//import axios from 'axios'
 
 function Home() {
   // setFile is function used to update the file variable
   const navigate = useNavigate()
   const [file, setFile] = useState()
-  const [responseData, setResponseData] = useState()
-  const url = 'http://127.0.0.1:5000';
+  //const [responseData, setResponseData] = useState()
+  //const url = 'http://127.0.0.1:5000'
 
   // handleChange is called when a file is uploaded, and uses the event as an argument to call setFile
   function handleUpload(event) {
@@ -31,7 +31,11 @@ function Home() {
         'content-type': 'multipart/form-data',
       },
     };
+
+    navigate('/loading', {state:{formData}})
+
     // sends HTTP POST request
+    /*
     axios.post(url, formData, config)
     .then((response) => {
       const res = response.data
@@ -40,15 +44,17 @@ function Home() {
         label: res.label,
         nutrition: res.nutrition
       }))
-    })
+    })*/
   }
 
 /*forward to results page once data is received*/
+/*
   useEffect(() => {
     if (responseData) {
-      navigate('/results', {state:{responseData}})
+      navigate('/loading', {state:{responseData}})
     }
   }, [responseData]);
+  */
   
 
   return (
