@@ -18,7 +18,7 @@ function Results () {
           {location.state.responseData.label}
         </h5>
         <h5>
-          
+          Weight: {location.state.responseData.weight}
         </h5>
         <h5>
           Nutritional value
