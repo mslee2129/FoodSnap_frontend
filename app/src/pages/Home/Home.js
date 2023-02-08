@@ -38,7 +38,8 @@ function Home() {
       console.log(response.data)
       setResponseData(({
         label: res.label,
-        nutrition: res.nutrition
+        nutrition: res.nutrition,
+        weight: res.weight
       }))
     })
   }

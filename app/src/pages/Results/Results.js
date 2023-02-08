@@ -18,7 +18,10 @@ function Results () {
           {location.state.responseData.label}
         </h5>
         <h5>
-          Nutritional value (per 100g)
+          
+        </h5>
+        <h5>
+          Nutritional value
         </h5>
         <div>
           <p>Calories: {location.state.responseData.nutrition.ENERC_KCAL}</p>
