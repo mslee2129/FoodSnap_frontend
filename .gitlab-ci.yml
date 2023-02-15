@@ -9,4 +9,4 @@ eslint:
   script: 
     - npm install -g eslint
     - eslint --init
-    - app/node_modules/eslint/bin/eslint.js
+    - node_modules/eslint/bin/eslint.js
