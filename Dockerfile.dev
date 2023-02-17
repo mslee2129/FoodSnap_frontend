@@ -1,5 +1,4 @@
-# build stage
-FROM node:18.14-alpine as build
+FROM node:18.14-alpine
 
 # set working directory
 WORKDIR /app
@@ -18,18 +17,8 @@ RUN npm install
 RUN npm install axios
 RUN npm install react-router-dom
 
-# build the project
-RUN npm run build
+# expose port
+EXPOSE 3000
 
-# production environment
-FROM nginx:alpine AS prod
-
-# set working directory
-WORKDIR /usr/share/nginx/html
-
-# copy files from previous stage
-COPY --from=build /app/build .
-
-EXPOSE 80
-
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+# start server
+CMD ["npm", "start"]
