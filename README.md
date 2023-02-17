@@ -16,6 +16,11 @@ Install axios
 npm install axios
 ```
 
+Install react-router-dom
+```
+npm install react-router-dom
+```
+
 Start server using
 ```
 npm start

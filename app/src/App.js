@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Results from './pages/Results/Results'
+import Loading from './pages/Loading/Loading'
 
 function App () {
   return (
@@ -10,6 +11,7 @@ function App () {
         <Route path="/" element={<Home/>} />
         <Route path="/home" element={<Home/>} />
         <Route path="/results" element={<Results/>} />
+        <Route path="/loading" element={<Loading/>} />
       </Routes>
     </div>
   )
