@@ -1,23 +1,19 @@
-.App {
+.Home {
   text-align: center;
 }
 
-.App-logo {
+.Home-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-.App-header {
+.Home-header {
   background-color: #F8EDE3;
-  min-height: 94vh;
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #798777;
-}
-
-.App-link {
-  color: #3d8fd3;
 }
