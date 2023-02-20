@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import logo from '../../resources/food_love.png'
 import Navigation from '../../elements/Navigation/Navigation'
 import './Home.css'
+import Hover from '../../elements/Hover/Hover'
 // needs to installed
 import axios from 'axios'
 
@@ -56,9 +57,19 @@ function Home() {
     }
   }, [responseData]);
 
+  const [showHoveringPage, setShowHoveringPage] = useState(false);
+
+  function toggleHoveringPage() {
+    setShowHoveringPage(!showHoveringPage);
+  }
+
   return (
     <div className="Home">
       <header className="Home-header">
+        {showHoveringPage && <Hover />}
+        <button className="hovering-button" onClick={toggleHoveringPage}>
+          About
+        </button>
         <h1>
           Welcome to FoodSnap!
         </h1>
