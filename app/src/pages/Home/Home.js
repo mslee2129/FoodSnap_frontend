@@ -42,6 +42,11 @@ function Home() {
         weight: res.weight
       }))
     })
+    .catch((error) => {
+      console.log(error.data);
+      setResponseData({})
+      navigate('/results', {state:{responseData}})
+    });
   }
 
 /*forward to results page once data is received*/
@@ -50,7 +55,6 @@ function Home() {
       navigate('/results', {state:{responseData}})
     }
   }, [responseData]);
-  
 
   return (
     <div className="Home">
