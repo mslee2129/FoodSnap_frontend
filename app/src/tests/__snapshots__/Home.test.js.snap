@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Matches DOM Snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Home"
+  >
+    <header
+      class="Home-header"
+    >
+      <h1>
+        Welcome to FoodSnap!
+      </h1>
+      <img
+        alt="logo"
+        class="Home-logo"
+        src=""
+      />
+      <form
+        data-testid="upload-form"
+      >
+        <p>
+          To start upload a picture (.png/.jpeg/.jpg) to get your calorie information!
+        </p>
+        <input
+          accept=".png,.jpeg,.jpg"
+          type="file"
+        />
+        <button
+          type="submit"
+        >
+          Upload
+        </button>
+      </form>
+    </header>
+    <nav
+      class="Navigation"
+    >
+      <a
+        href="/home"
+        id="home_link"
+      >
+        <p>
+          <img
+            alt="home logo"
+            class="logo"
+            src=""
+          />
+          Home
+        </p>
+      </a>
+      <a
+        href="/results"
+        id="results_link"
+      >
+        <p>
+          <img
+            alt="results logo"
+            class="logo"
+            src=""
+          />
+          Results
+        </p>
+      </a>
+    </nav>
+  </div>
+</DocumentFragment>
+`;
