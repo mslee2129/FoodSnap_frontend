@@ -1,1 +1,30 @@
-#to do
+image: node:latest
+
+stages:
+  - lint
+  - test
+
+eslint:
+  stage: lint
+  script:
+    - cd app
+    - npm install
+    - node_modules/.bin/eslint --init
+    - node_modules/eslint/bin/eslint.js
+
+test:
+  stage: test
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  script:
+    - cd app
+    - npm install jest
+    - npm run test:ci
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - junit.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: app/coverage/cobertura-coverage.xml
+
