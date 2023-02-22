@@ -21,7 +21,6 @@ function Results() {
             <p>Protein: {location.state.responseData.nutrition.PROCNT}</p>
           </div>
         </header>
-        <Navigation />
       </div>
     )
   } else {
@@ -31,7 +30,6 @@ function Results() {
           <h1>No Result Available</h1>
           <button onClick={() => navigate('/')}>Try Again</button>
         </header>
-        <Navigation />
       </div>
     )
   }

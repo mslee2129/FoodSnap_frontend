@@ -82,7 +82,6 @@ function Home() {
           <button type="submit">Upload</button>
         </form>
       </header>
-      <Navigation />
     </div>
   );
 }
