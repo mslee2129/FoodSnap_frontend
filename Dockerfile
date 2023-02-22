@@ -30,6 +30,7 @@ WORKDIR /usr/share/nginx/html
 # copy files from previous stage
 COPY --from=build /app/build .
 
+# expose port
 EXPOSE 80
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../resources/food_love.png'
 import Navigation from '../../elements/Navigation/Navigation'
+import { config } from '../../Constants'
 import './Home.css'
 // needs to installed
 import axios from 'axios'
@@ -11,7 +12,9 @@ function Home() {
   const navigate = useNavigate()
   const [file, setFile] = useState()
   const [responseData, setResponseData] = useState()
-  const url = 'http://127.0.0.1:5000';
+
+  // set URL for back-end depending on if running in dev or prod
+  var url = config.url.API_URL;
 
   // handleChange is called when a file is uploaded, and uses the event as an argument to call setFile
   function handleUpload(event) {
