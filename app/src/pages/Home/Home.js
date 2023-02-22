@@ -4,6 +4,7 @@ import logo from '../../resources/food_love.png'
 import Navigation from '../../elements/Navigation/Navigation'
 import { config } from '../../Constants'
 import './Home.css'
+import Hover from '../../elements/Hover/Hover'
 // needs to installed
 import axios from 'axios'
 
@@ -41,18 +42,20 @@ function Home() {
     };
     // sends HTTP POST request
     axios.post(url, formData, config)
-        .then((response) => {
-          const res = response.data
-          console.log(response.data)
-          setResponseData(({
-            label: res.label,
-            nutrition: res.nutrition,
-            weight: res.weight
-          }))
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+    .then((response) => {
+      const res = response.data
+      console.log(response.data)
+      setResponseData(({
+        label: res.label,
+        nutrition: res.nutrition,
+        weight: res.weight
+      }))
+    })
+    .catch((error) => {
+      console.log(error.data);
+      setResponseData({})
+      navigate('/results', {state:{responseData}})
+    });
   }
 
 
@@ -62,11 +65,20 @@ function Home() {
       navigate('/results', {state:{responseData}})
     }
   }, [responseData]);
-  
+
+  const [showHoveringPage, setShowHoveringPage] = useState(false);
+
+  function toggleHoveringPage() {
+    setShowHoveringPage(!showHoveringPage);
+  }
 
   return (
     <div className="Home">
       <header className="Home-header">
+        {showHoveringPage && <Hover />}
+        <button className="hovering-button" onClick={toggleHoveringPage}>
+          About
+        </button>
         <h1>
           Welcome to FoodSnap!
         </h1>
@@ -79,7 +91,6 @@ function Home() {
           <button type="submit">Upload</button>
         </form>
       </header>
-      <Navigation />
     </div>
   );
 }
