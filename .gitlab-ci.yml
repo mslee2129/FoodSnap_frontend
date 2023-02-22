@@ -3,6 +3,7 @@ image: node:latest
 stages:
   - lint
   - test
+  - deploy
 
 eslint:
   stage: lint
@@ -28,3 +29,17 @@ test:
         coverage_format: cobertura
         path: app/coverage/cobertura-coverage.xml
 
+deploy:
+  stage: deploy
+  environment: production
+  only:
+    - master
+  image: google/cloud-sdk
+  services:
+    - docker:dind
+  before_script: []
+  script:
+    - echo $GCP_CLOUD_BUILD_SERVICE_KEY > gcloud-service-key.json
+    - gcloud auth activate-service-account --key-file gcloud-service-key.json
+    - gcloud config set project $GCP_PROJECT_ID
+    - gcloud builds submit . --config=cloudbuild.yaml
