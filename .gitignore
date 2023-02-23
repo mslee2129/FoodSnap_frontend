@@ -13,3 +13,6 @@ coverage
 
 # frontend production
 build
+
+# dev folders
+.idea
