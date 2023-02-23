@@ -15,9 +15,9 @@ function Results () {
             <h5>Weight: {location.state.responseData.weight} grams</h5>
             <h5>Nutritional value</h5>
             <div>
-              <p>Calories: {location.state.responseData.nutrition.ENERC_KCAL}</p>
-              <p>Fat: {location.state.responseData.nutrition.FAT}</p>
-              <p>Protein: {location.state.responseData.nutrition.PROCNT}</p>
+              <p>Calories: {location.state.responseData.nutrition.ENERC_KCAL} KCal</p>
+              <p>Fat: {location.state.responseData.nutrition.FAT} grams</p>
+              <p>Protein: {location.state.responseData.nutrition.PROCNT} grams</p>
             </div>
           </header>
         </div>
