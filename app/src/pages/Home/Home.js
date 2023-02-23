@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../resources/food_love.png'
-import Navigation from '../../elements/Navigation/Navigation'
 import { config } from '../../Constants'
 import './Home.css'
+import './Loading.css'
+import Hover from '../../elements/Hover/Hover'
 // needs to installed
 import axios from 'axios'
 
@@ -12,6 +13,8 @@ function Home() {
   const navigate = useNavigate()
   const [file, setFile] = useState()
   const [responseData, setResponseData] = useState()
+  const [isLoading, setIsLoading] = useState(false);
+  const [showHoveringPage, setShowHoveringPage] = useState(false);
 
   // set URL for back-end depending on if running in dev or prod
   var url = config.url.API_URL;
@@ -40,6 +43,7 @@ function Home() {
       },
     };
     // sends HTTP POST request
+    setIsLoading(true)
     axios.post(url, formData, config)
         .then((response) => {
           const res = response.data
@@ -51,22 +55,40 @@ function Home() {
           }))
         })
         .catch((error) => {
-          console.error(error);
-        });
+          // send to results page with empty responseData
+          console.log(error.data);
+          setResponseData({})
+          navigate('/results', {state:{responseData}})
+        })
+        // change loading state to false before moving
+        .finally(() => setIsLoading(false));
+
   }
 
 
-/*forward to results page once data is received*/
+  /*forward to results page once data is received*/
   useEffect(() => {
     if (responseData) {
       navigate('/results', {state:{responseData}})
     }
   }, [responseData]);
-  
+
+
+  function toggleHoveringPage() {
+    setShowHoveringPage(!showHoveringPage);
+  }
 
   return (
     <div className="Home">
       <header className="Home-header">
+        {showHoveringPage && <Hover />}
+        {isLoading && (<div className="Loading">
+          <div className='Loading-icon'></div>
+        </div>
+        )}
+        <button className="hovering-button" onClick={toggleHoveringPage}>
+          About
+        </button>
         <h1>
           Welcome to FoodSnap!
         </h1>
@@ -79,7 +101,6 @@ function Home() {
           <button type="submit">Upload</button>
         </form>
       </header>
-      <Navigation />
     </div>
   );
 }

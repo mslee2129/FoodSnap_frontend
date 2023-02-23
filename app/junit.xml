@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="6" failures="0" errors="0" time="0.95">
-  <testsuite name="Home" errors="0" failures="0" skipped="0" timestamp="2023-02-23T11:14:40" time="0.373" tests="6">
-    <testcase classname="Home Matches DOM Snapshot" name="Home Matches DOM Snapshot" time="0.021">
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="0.993">
+  <testsuite name="Home" errors="0" failures="0" skipped="0" timestamp="2023-02-23T13:05:04" time="0.409" tests="6">
+    <testcase classname="Home Matches DOM Snapshot" name="Home Matches DOM Snapshot" time="0.02">
     </testcase>
-    <testcase classname="Home is rendered" name="Home is rendered" time="0.024">
+    <testcase classname="Home is rendered" name="Home is rendered" time="0.026">
     </testcase>
-    <testcase classname="Home upload button exists" name="Home upload button exists" time="0.013">
+    <testcase classname="Home upload button exists" name="Home upload button exists" time="0.014">
     </testcase>
-    <testcase classname="Home sets file state when a file is uploaded" name="Home sets file state when a file is uploaded" time="0.008">
+    <testcase classname="Home sets file state when a file is uploaded" name="Home sets file state when a file is uploaded" time="0.009">
     </testcase>
-    <testcase classname="Home does not set file state if user cancels file upload" name="Home does not set file state if user cancels file upload" time="0.007">
+    <testcase classname="Home does not set file state if user cancels file upload" name="Home does not set file state if user cancels file upload" time="0.008">
     </testcase>
     <testcase classname="Home does not make API request if file state is not set" name="Home does not make API request if file state is not set" time="0.012">
     </testcase>
