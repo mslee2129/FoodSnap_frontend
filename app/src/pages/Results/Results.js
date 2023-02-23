@@ -19,6 +19,7 @@ function Results () {
               <p>Fat: {location.state.responseData.nutrition.FAT} grams</p>
               <p>Protein: {location.state.responseData.nutrition.PROCNT} grams</p>
             </div>
+              <button onClick={() => navigate('/')}>Try Again</button>
           </header>
         </div>
     )
