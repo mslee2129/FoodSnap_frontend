@@ -8,6 +8,11 @@ exports[`Home Matches DOM Snapshot 1`] = `
     <header
       class="Home-header"
     >
+      <button
+        class="hovering-button"
+      >
+        About
+      </button>
       <h1>
         Welcome to FoodSnap!
       </h1>
@@ -33,36 +38,6 @@ exports[`Home Matches DOM Snapshot 1`] = `
         </button>
       </form>
     </header>
-    <nav
-      class="Navigation"
-    >
-      <a
-        href="/home"
-        id="home_link"
-      >
-        <p>
-          <img
-            alt="home logo"
-            class="logo"
-            src=""
-          />
-          Home
-        </p>
-      </a>
-      <a
-        href="/results"
-        id="results_link"
-      >
-        <p>
-          <img
-            alt="results logo"
-            class="logo"
-            src=""
-          />
-          Results
-        </p>
-      </a>
-    </nav>
   </div>
 </DocumentFragment>
 `;
