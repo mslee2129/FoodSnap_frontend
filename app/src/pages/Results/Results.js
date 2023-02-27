@@ -6,7 +6,7 @@ function Results () {
 
   const location = useLocation()
   const navigate = useNavigate()
-  if (location.state.responseData) {
+  if (location.state.responseData.label) {
     return (
         <div className="App">
           <header className="App-header">
@@ -31,6 +31,7 @@ function Results () {
         <div className="App">
           <header className="App-header">
             <h1>No Result Available</h1>
+              {/*<h2>{location.state.responseData.error}</h2>*/}
             <button onClick={() => navigate('/')}>Try Again</button>
           </header>
         </div>
