@@ -57,10 +57,7 @@ function Home() {
         })
         .catch((error) => {
           console.log(error.data);
-          //setResponseData({})
-          setResponseData({
-            error: error.data
-          })
+          setResponseData({})
           navigate('/results', {state: {responseData}})
         })
         // change loading state to false before moving
