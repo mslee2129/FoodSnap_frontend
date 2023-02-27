@@ -51,18 +51,20 @@ function Home() {
           setResponseData(({
             label: res.label,
             nutrition: res.nutrition,
-            weight: res.weight
+            weight: res.weight,
+            user_msg: res.user_msg
           }))
         })
         .catch((error) => {
-          // send to results page with empty responseData
           console.log(error.data);
-          setResponseData({})
-          navigate('/results', {state:{responseData}})
+          //setResponseData({})
+          setResponseData({
+            error: error.data
+          })
+          navigate('/results', {state: {responseData}})
         })
         // change loading state to false before moving
         .finally(() => setIsLoading(false));
-
   }
 
 
