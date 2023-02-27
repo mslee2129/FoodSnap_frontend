@@ -6,7 +6,7 @@ function Results () {
 
   const location = useLocation()
   const navigate = useNavigate()
-  if (location.state.responseData) {
+  if (location.state.responseData.label) {
     return (
         <div className="App">
           <header className="App-header">
