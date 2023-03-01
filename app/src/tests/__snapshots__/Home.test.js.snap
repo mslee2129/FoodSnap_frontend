@@ -31,6 +31,11 @@ exports[`Home Matches DOM Snapshot 1`] = `
           accept=".png,.jpeg,.jpg"
           type="file"
         />
+        <input
+          placeholder="Plate diameter (cm)"
+          step="0.01"
+          type="number"
+        />
         <button
           type="submit"
         >
