@@ -12,6 +12,7 @@ function Home() {
   // setFile is function used to update the file variable
   const navigate = useNavigate()
   const [file, setFile] = useState()
+  const [plateValue, setPlateValue] = useState();
   const [responseData, setResponseData] = useState()
   const [isLoading, setIsLoading] = useState(false);
   const [showHoveringPage, setShowHoveringPage] = useState(false);
@@ -37,6 +38,7 @@ function Home() {
     const formData = new FormData();
     formData.append('file', file);
     formData.append('fileName', file.name);
+    formData.append('plateValue', plateValue);
     const config = {
       headers: {
         'content-type': 'multipart/form-data',
@@ -97,6 +99,7 @@ function Home() {
           <p>To start upload a picture (.png/.jpeg/.jpg) to get your calorie information!</p>
           {/* restricts file type to png, jpeg, jpg from upload window and calls upload event handler */}
           <input type="file" accept=".png,.jpeg,.jpg" onChange={handleUpload}/>
+          <input type="number" step="0.01" placeholder="Plate diameter (cm)" onChange={(event) => setPlateValue(parseFloat(event.target.value))} />
           <button type="submit">Upload</button>
         </form>
       </header>
