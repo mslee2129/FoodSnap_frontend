@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="6" failures="0" errors="0" time="1.362">
-  <testsuite name="Home" errors="0" failures="0" skipped="0" timestamp="2023-03-02T15:50:28" time="0.61" tests="6">
-    <testcase classname="Home Matches DOM Snapshot" name="Home Matches DOM Snapshot" time="0.019">
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="1.369">
+  <testsuite name="Home" errors="0" failures="0" skipped="0" timestamp="2023-03-02T16:37:25" time="0.526" tests="6">
+    <testcase classname="Home Matches DOM Snapshot" name="Home Matches DOM Snapshot" time="0.02">
     </testcase>
-    <testcase classname="Home is rendered" name="Home is rendered" time="0.028">
+    <testcase classname="Home is rendered" name="Home is rendered" time="0.026">
     </testcase>
-    <testcase classname="Home upload button exists" name="Home upload button exists" time="0.012">
+    <testcase classname="Home upload button exists" name="Home upload button exists" time="0.015">
     </testcase>
-    <testcase classname="Home sets file state when a file is uploaded" name="Home sets file state when a file is uploaded" time="0.009">
+    <testcase classname="Home sets file state when a file is uploaded" name="Home sets file state when a file is uploaded" time="0.01">
     </testcase>
     <testcase classname="Home does not set file state if user cancels file upload" name="Home does not set file state if user cancels file upload" time="0.01">
     </testcase>
