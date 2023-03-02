@@ -51,13 +51,17 @@ function Home() {
         .then((response) => {
           console.log(response.data)
           const res = response.data
-          if (res.results) {
-            const results = res.results.map((result) => ({
-              label: result.label,
-              nutrition: result.nutrition,
-              weight: result.weight,
-            }))
-            setResponseData(results)
+          if (res.status) {
+            const responseData = {
+              model_code: res.model_code,
+              status: res.status,
+              results: res.results.map((result) => ({
+                label: result.label,
+                nutrition: result.nutrition,
+                weight: result.weight,
+              })),
+            };
+            setResponseData(responseData)
           }
         })
         .catch((error) => {
@@ -84,6 +88,7 @@ function Home() {
   }
 
   return (
+    <pre>
     <div className="Home">
       <header className="Home-header">
         {showHoveringPage && <Hover />}
@@ -108,6 +113,7 @@ function Home() {
         </form>
       </header>
     </div>
+    </pre>
   );
 }
 
