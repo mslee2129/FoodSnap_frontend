@@ -108,7 +108,7 @@ function Home() {
           <p>To start upload a picture (.png/.jpeg/.jpg) to get your calorie information!</p>
           {/* restricts file type to png, jpeg, jpg from upload window and calls upload event handler */}
           <input type="file" accept=".png,.jpeg,.jpg" onChange={handleUpload}/>
-          <input type="number" step="0.01" placeholder="Plate diameter (cm)" onChange={(event) => setPlateValue(parseFloat(event.target.value))} />
+          <input type="number" step="0.5" placeholder="Plate diameter (cm)" onChange={(event) => setPlateValue(parseFloat(event.target.value))} />
           <button type="submit">Upload</button>
         </form>
       </header>
