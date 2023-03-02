@@ -23,4 +23,7 @@
 
 .HoveringPageContent {
   padding: 10px;
+  overflow-x: auto;
+  word-wrap: break-word;
+  font-size: 15px;
 }
