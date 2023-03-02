@@ -34,7 +34,7 @@ exports[`Home Matches DOM Snapshot 1`] = `
           />
           <input
             placeholder="Plate diameter (cm)"
-            step="0.01"
+            step="0.5"
             type="number"
           />
           <button
