@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../resources/food_love.png'
 import { config } from '../../Constants'
+//import { Results } from '../Results/Results'
 import './Home.css'
 import './Loading.css'
 import Hover from '../../elements/Hover/Hover'
@@ -48,14 +49,16 @@ function Home() {
     setIsLoading(true)
     axios.post(url, formData, config)
         .then((response) => {
-          const res = response.data
           console.log(response.data)
-          setResponseData(({
-            label: res.label,
-            nutrition: res.nutrition,
-            weight: res.weight,
-            user_msg: res.user_msg
-          }))
+          const res = response.data
+          if (res.results) {
+            const results = res.results.map((result) => ({
+              label: result.label,
+              nutrition: result.nutrition,
+              weight: result.weight,
+            }))
+            setResponseData(results)
+          }
         })
         .catch((error) => {
           console.log(error.data);
@@ -70,6 +73,7 @@ function Home() {
   /*forward to results page once data is received*/
   useEffect(() => {
     if (responseData) {
+      console.log("response data", responseData)
       navigate('/results', {state:{responseData}})
     }
   }, [responseData]);
