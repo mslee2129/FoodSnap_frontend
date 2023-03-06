@@ -10,7 +10,7 @@ exports[`Home Matches DOM Snapshot 1`] = `
         class="Home-header"
       >
         <button
-          class="hovering-button"
+          class="Button"
         >
           About
         </button>
@@ -37,11 +37,14 @@ exports[`Home Matches DOM Snapshot 1`] = `
             step="0.5"
             type="number"
           />
-          <button
-            type="submit"
-          >
-            Upload
-          </button>
+          <div>
+            <button
+              class="Button"
+              type="submit"
+            >
+              Upload
+            </button>
+          </div>
         </form>
       </header>
     </div>
