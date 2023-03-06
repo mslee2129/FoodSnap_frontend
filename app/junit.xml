@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="6" failures="0" errors="0" time="1.369">
-  <testsuite name="Home" errors="0" failures="0" skipped="0" timestamp="2023-03-02T16:37:25" time="0.526" tests="6">
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="1.644">
+  <testsuite name="Home" errors="0" failures="0" skipped="0" timestamp="2023-03-06T16:57:01" time="0.746" tests="6">
     <testcase classname="Home Matches DOM Snapshot" name="Home Matches DOM Snapshot" time="0.02">
     </testcase>
-    <testcase classname="Home is rendered" name="Home is rendered" time="0.026">
+    <testcase classname="Home is rendered" name="Home is rendered" time="0.025">
     </testcase>
     <testcase classname="Home upload button exists" name="Home upload button exists" time="0.015">
     </testcase>
@@ -11,7 +11,7 @@
     </testcase>
     <testcase classname="Home does not set file state if user cancels file upload" name="Home does not set file state if user cancels file upload" time="0.01">
     </testcase>
-    <testcase classname="Home does not make API request if file state is not set" name="Home does not make API request if file state is not set" time="0.011">
+    <testcase classname="Home does not make API request if file state is not set" name="Home does not make API request if file state is not set" time="0.01">
     </testcase>
   </testsuite>
 </testsuites>

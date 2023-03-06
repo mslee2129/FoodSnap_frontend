@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './Hover.css'
+import '../Button/Button.css'
 
 function Hover() {
 
@@ -20,7 +21,7 @@ function Hover() {
                             picture of a food item to estimate its nutritional value. To get
                             started, upload a picture of your food.
                         </p>
-                        <button className="CloseButton" onClick={handleClose}>
+                        <button className="Button" onClick={handleClose}>
                             X
                         </button>
                     </div>
