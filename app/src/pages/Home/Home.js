@@ -41,6 +41,7 @@ function Home() {
     formData.append('file', file);
     formData.append('fileName', file.name);
     formData.append('plateValue', plateValue);
+
     const config = {
       headers: {
         'content-type': 'multipart/form-data',
@@ -73,7 +74,6 @@ function Home() {
         // change loading state to false before moving
         .finally(() => setIsLoading(false));
   }
-
 
   /*forward to results page once data is received*/
   useEffect(() => {
