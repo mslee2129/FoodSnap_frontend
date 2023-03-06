@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import './Results.css'
+import '../../elements/Button/Button.css'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 function Results () {
@@ -32,7 +33,7 @@ function Results () {
             <div className="App">
                 <header className="App-header">
                     <h1>No Result Available</h1>
-                    <button onClick={() => navigate('/')}>Try Again</button>
+                    <button className='Button' onClick={() => navigate('/')}>Try Again</button>
                 </header>
             </div>
         )
@@ -67,7 +68,7 @@ function Results () {
             </tbody>
           </table>
             <h4>{model_codes[location.state.responseData.model_code]}</h4>
-          <button onClick={() => navigate('/')}>Try Again</button>
+          <button className='Button' onClick={() => navigate('/')}>Try Again</button>
       </header>
     </div>
     </pre>

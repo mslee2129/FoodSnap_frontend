@@ -5,6 +5,7 @@ import { config } from '../../Constants'
 //import { Results } from '../Results/Results'
 import './Home.css'
 import './Loading.css'
+import '../../elements/Button/Button.css'
 import Hover from '../../elements/Hover/Hover'
 // needs to installed
 import axios from 'axios'
@@ -96,7 +97,7 @@ function Home() {
           <div className='Loading-icon'></div>
         </div>
         )}
-        <button className="hovering-button" onClick={toggleHoveringPage}>
+        <button className="Button" onClick={toggleHoveringPage}>
           About
         </button>
         <h1>
@@ -109,7 +110,9 @@ function Home() {
           {/* restricts file type to png, jpeg, jpg from upload window and calls upload event handler */}
           <input type="file" accept=".png,.jpeg,.jpg" onChange={handleUpload}/>
           <input type="number" step="0.5" placeholder="Plate diameter (cm)" onChange={(event) => setPlateValue(parseFloat(event.target.value))} />
-          <button type="submit">Upload</button>
+          <div>
+            <button className = 'Button' type="submit">Upload</button>
+          </div>
         </form>
       </header>
     </div>
