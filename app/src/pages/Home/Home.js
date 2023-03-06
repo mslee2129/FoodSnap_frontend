@@ -5,6 +5,7 @@ import { config } from '../../Constants'
 //import { Results } from '../Results/Results'
 import './Home.css'
 import './Loading.css'
+import '../../elements/Button/Button.css'
 import Hover from '../../elements/Hover/Hover'
 // needs to installed
 import axios from 'axios'
@@ -40,6 +41,7 @@ function Home() {
     formData.append('file', file);
     formData.append('fileName', file.name);
     formData.append('plateValue', plateValue);
+
     const config = {
       headers: {
         'content-type': 'multipart/form-data',
@@ -73,7 +75,6 @@ function Home() {
         .finally(() => setIsLoading(false));
   }
 
-
   /*forward to results page once data is received*/
   useEffect(() => {
     if (responseData) {
@@ -96,7 +97,7 @@ function Home() {
           <div className='Loading-icon'></div>
         </div>
         )}
-        <button className="hovering-button" onClick={toggleHoveringPage}>
+        <button className="Button" onClick={toggleHoveringPage}>
           About
         </button>
         <h1>
@@ -108,8 +109,10 @@ function Home() {
           <p>To start upload a picture (.png/.jpeg/.jpg) to get your calorie information!</p>
           {/* restricts file type to png, jpeg, jpg from upload window and calls upload event handler */}
           <input type="file" accept=".png,.jpeg,.jpg" onChange={handleUpload}/>
-          <input type="number" step="0.01" placeholder="Plate diameter (cm)" onChange={(event) => setPlateValue(parseFloat(event.target.value))} />
-          <button type="submit">Upload</button>
+          <input type="number" step="0.5" placeholder="Plate diameter (cm)" onChange={(event) => setPlateValue(parseFloat(event.target.value))} />
+          <div>
+            <button className = 'Button' type="submit">Upload</button>
+          </div>
         </form>
       </header>
     </div>
