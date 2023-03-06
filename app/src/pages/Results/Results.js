@@ -43,30 +43,37 @@ function Results () {
         <div className="App">
             <header className="App-header">
                 <h1>Results</h1>
-                <table>
-                <thead>
-                <tr>
-                    <th>Label</th>
-                    <th>Weight</th>
-                    <th>Calories</th>
-                    <th>Carbohydrates</th>
-                    <th>Protein</th>
-                    <th>Fat</th>
-              </tr>
-            </thead>
-            <tbody>
             {Array.isArray(tableData) && tableData.map((result, index) => (
-                <tr key={index}>
-                    <td>{result.label}</td>
-                    <td>{result.weight} g</td>
-                    <td>{result.nutrition ? result.nutrition.ENERC_KCAL : ''} KCal</td>
-                    <td>{result.nutrition ? result.nutrition.CHOCDF : ''} g</td>
-                    <td>{result.nutrition ? result.nutrition.PROCNT : ''} g</td>
-                    <td>{result.nutrition ? result.nutrition.FAT : ''} g</td>
-                </tr>
+                <table key = {index}>
+                    <caption>{result.label}</caption>
+                    {/* <tr>
+                        <th>Label</th>
+                        <th>{result.label}</th>
+                    </tr> */}
+                    <tr>
+                        <td>Weight</td>
+                        <td>{result.weight} g</td>
+                    </tr>
+                    <tr>
+                        <td>Calories</td>
+                        <td>{result.nutrition ? result.nutrition.ENERC_KCAL : ''} KCal</td>
+                    </tr>
+                    <tr>
+                        <td>Carbohydrates</td>
+                        <td>{result.nutrition ? result.nutrition.CHOCDF : ''} g</td>
+                    </tr>
+                    <tr>
+                        <td>Protein</td>
+                        <td>{result.nutrition ? result.nutrition.PROCNT : ''} g</td>
+                    </tr>
+                    <tr>
+                        <td>Fat</td>
+                        <td>{result.nutrition ? result.nutrition.FAT : ''} g</td>
+                    </tr>
+                    
+                </table>
+                
             ))}
-            </tbody>
-          </table>
             <h4>{model_codes[location.state.responseData.model_code]}</h4>
           <button className='Button' onClick={() => navigate('/')}>Try Again</button>
       </header>

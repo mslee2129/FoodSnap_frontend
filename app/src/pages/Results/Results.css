@@ -8,7 +8,6 @@
 }
 
 .App-header {
-  background-color: #F8EDE3;
   min-height: 94vh;
   display: flex;
   flex-direction: column;
@@ -18,10 +17,19 @@
   font-size: calc(10px + 2vmin);
   color: #798777;
 }
-
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
 th, td {
   padding: 10px; /* Increase the padding value to increase the space between the cells */
   border: 1px solid black;
+  width: 50%;
+}
+
+caption {
+  font-size: 24;
+  font-weight: bold;
 }
 
 pre {
