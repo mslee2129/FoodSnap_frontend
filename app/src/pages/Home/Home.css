@@ -5,10 +5,10 @@
 .Home-logo {
   height: 40vmin;
   pointer-events: none;
+  
 }
 
 .Home-header {
-  background-color: #F8EDE3;
   min-height: 92vh;
   display: flex;
   flex-direction: column;
