@@ -89,7 +89,6 @@ function Home() {
   }
 
   return (
-    <pre>
     <div className="Home">
       <header className="Home-header">
         {showHoveringPage && <Hover />}
@@ -109,14 +108,14 @@ function Home() {
           <p>To start upload a picture (.png/.jpeg/.jpg) to get your calorie information!</p>
           {/* restricts file type to png, jpeg, jpg from upload window and calls upload event handler */}
           <input type="file" accept=".png,.jpeg,.jpg" onChange={handleUpload}/>
-          <input type="number" step="0.5" placeholder="Plate diameter (cm)" onChange={(event) => setPlateValue(parseFloat(event.target.value))} />
+          <input type="number" step="0.5" min="10" max="40" placeholder="Plate diameter (default: 25cm) " size="32"
+                 onChange={(event) => setPlateValue(parseFloat(event.target.value))} />
           <div>
             <button className = 'Button' type="submit">Upload</button>
           </div>
         </form>
       </header>
     </div>
-    </pre>
   );
 }
 
