@@ -43,7 +43,8 @@ function Results () {
         <div className="App">
             <header className="App-header">
                 <h1>Results</h1>
-            {Array.isArray(tableData) && tableData.map((result, index) => (
+                <h4>{model_codes[location.state.responseData.model_code]}</h4>
+                {Array.isArray(tableData) && tableData.map((result, index) => (
                 <table key = {index}>
                     <caption>{result.label}</caption>
                     {/* <tr>
@@ -74,7 +75,6 @@ function Results () {
                 </table>
                 
             ))}
-            <h4>{model_codes[location.state.responseData.model_code]}</h4>
           <button className='Button' onClick={() => navigate('/')}>Try Again</button>
       </header>
     </div>
