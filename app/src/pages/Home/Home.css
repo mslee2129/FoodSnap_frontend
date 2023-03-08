@@ -1,26 +1,61 @@
-.Home {
-  text-align: center;
-  height: 100vh
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-.Home-logo {
-  height: 40vmin;
-  pointer-events: none;
-  
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-right {
+    margin-left: auto;
 }
 
 .Home-header {
-  background-color: tan;
-  min-height: 92vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #798777;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-pre {
-  font-family: "Open Sans Bold'", sans-serif;
-  margin: auto;
+.left-side {
+    position: absolute;
+    left: 0;
 }
+
+.right-side {
+    position: absolute;
+    right: 0;
+}
+
+
+/*.Home {*/
+/*  text-align: center;*/
+/*  height: 100vh;*/
+/*}*/
+
+/*.font-test {*/
+/*  font-family: "Merriweather", serif;*/
+/*}*/
+
+/*.Home-logo {*/
+/*  height: 40vmin;*/
+/*  pointer-events: none;*/
+/*}*/
+
+/*.Home-header {*/
+/*  background-color: theme('colors.teagreen');*/
+/*  min-height: 92vh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  font-size: calc(10px + 2vmin);*/
+/*  color: #798777;*/
+/*}*/
