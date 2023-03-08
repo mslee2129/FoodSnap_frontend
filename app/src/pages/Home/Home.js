@@ -128,7 +128,8 @@ function Home() {
             </div>
             <div>
               <h1 className="text-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                Welcome to <span className = "text-blue-600 dark:text-blue-500"> FoodSnap!</span>
+                Welcome to <span className = "text-blue-600 dark:text-blue-500"> FoodSnap!</span> <span
+                  className="bg-blue-100 text-red-800 text-sm font-semibold mr-2 px-2.5 py-0.5 top-0 rounded dark:bg-blue-200 dark:text-blue-800">ALPHA</span>
               </h1>
               <p className="mb-6 text-sm font-normal text-justify text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
                 Imagine that you could show a dish to an app and it would come back to you with the number of calories that it contained?
