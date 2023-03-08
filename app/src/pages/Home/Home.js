@@ -12,6 +12,7 @@ function Home() {
   // setFile is function used to update the file variable
   const navigate = useNavigate()
   const [file, setFile] = useState()
+  const [isValidInput, setIsValidInput] = useState(true);
   const [plateValue, setPlateValue] = useState();
   const [responseData, setResponseData] = useState()
   const [isLoading, setIsLoading] = useState(false);
@@ -23,6 +24,17 @@ function Home() {
   // handleChange is called when a file is uploaded, and uses the event as an argument to call setFile
   function handleUpload(event) {
     setFile(event.target.files[0])
+  }
+
+  function handlePlateValueChange(event) {
+    const value = parseFloat(event.target.value);
+    if (value < 10 || value > 40) {
+      setIsValidInput(false);
+      setPlateValue()
+    } else {
+      setIsValidInput(true);
+      setPlateValue(value);
+    }
   }
 
   function handleSubmit(event) {
@@ -123,19 +135,54 @@ function Home() {
               </p>
             </div>
           </div>
+          <div className = "inline-flex justify-center items-center block">
           <form onSubmit={handleSubmit} data-testid="upload-form" className="flex flex-col justify-center items-center mt-4">
-
-            {/* restricts file type to png, jpeg, jpg from upload window and calls upload event handler */}
-            <input type="file" accept=".png,.jpeg,.jpg" onChange={handleUpload}/>
-            <input type="number" step="0.5" min="10" max="40" placeholder="Plate diameter (default: 25cm) " size="32"
-                   onChange={(event) => setPlateValue(parseFloat(event.target.value))} />
-            <div>
-              <Button gradientDuoTone={"tealToLime"}>Upload</Button>
+            <div className="flex justify-between w-full mb-4">
+              <div className= "justify-center text-left">
+                <label htmlFor="file_input" className="justify-left block mb-2 text-sm font-medium text-gray-700 dark:text-gray-400">Upload your photo here:</label>
+              <div className = "flex justify-center w-full h-10 mb-6" >
+              <input
+                  className="block w-full h-10 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                  id="file_input" type="file" accept=".png,.jpeg,.jpg" onChange={handleUpload} />
+              </div>
+            </div>
+            </div>
+            <div className= "justify-center text-left">
+                <label htmlFor="plate-value" className="justify-left block mb-2 text-sm font-medium text-gray-700 dark:text-gray-400">Enter your plate diameter:</label>
+            <div className = "flex justify-center w-full h-10 mb-6 space-x-4" >
+            <input
+                    type="number"
+                    step="0.5"
+                    min="10"
+                    max="40"
+                    id="plate-value"
+                    className={`${
+                        isValidInput ? 'focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:border-green-500 w-full block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">' 
+                            : 'focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:border-red-600 w-full bg-red-50 border border-red-500 text-red-900 placeholder-red-700 dark:text-red-500 dark:placeholder-red-500'
+                    } text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-green-500`}
+                    placeholder="Default: 25cm"
+                    value={plateValue}
+                    onChange={handlePlateValueChange}
+                />
+                <div className = "w-auto h-auto">
+                {isValidInput ? (
+                    <p className=" text-sm text-gray-900 dark:text-gray-400">
+                      <span className="font-medium">Please enter a number between 10 and 40!</span>
+                    </p>
+                ) : (
+                    <p className="text-sm text-red-600 dark:text-red-500">
+                      <span className="font-medium">Please enter a number between 10 and 40!</span>
+                    </p>
+                )}
+              </div>
+              </div>
+              <div className ="text-center">
+                <Button gradientDuoTone={"tealToLime"}>Upload</Button>
+              </div>
             </div>
           </form>
         </div>
-       {/* upload picture functionality */}
-
+        </div>
       </header>
     </div>
   );
