@@ -5,7 +5,7 @@ import { config } from '../../Constants'
 import './Home.css'
 import './Loading.css'
 // import Hover from '../../elements/Hover/Hover'
-import Drawer from './Drawer'
+import Drawer from './Drawer' // needed for drawer
 import axios from 'axios'
 import Button from "../../components/Button";
 
@@ -17,8 +17,7 @@ function Home() {
   const [plateValue, setPlateValue] = useState();
   const [responseData, setResponseData] = useState()
   const [isLoading, setIsLoading] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  // const [showHoveringPage, setShowHoveringPage] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // needed for drawer
 
   // set URL for back-end depending on if running in dev or prod
   var url = config.url.API_URL;
@@ -126,20 +125,24 @@ function Home() {
         </div>
         )}
         
-        <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" onClick={() => setIsOpen(true)}>
-          Show drawer
-        </button>
+        <div className="flex flex-col justify-center items-start min-h-screen px-8 lg:px-64 dark:bg-gray-800">
 
-        {isOpen && <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
+        {/* Start of drawer */}
+        <button className="fixed items-center justify-center top-1 right-0 z-10 text-white bg-transparent rounded-lg text-sm px-5 py-5 mr-2 mb-2" type="button" onClick={() => setIsOpen(true)}>
+          <svg className="w-7 h-7" fill="currentColor" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" strokeLinecap="round" strokeLinejoin="round"></path>
+          </svg>
+        </button>
+        <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
             <p>FoodSnap is a progressive web app that allows you to upload/take a
                 picture of a food item to estimate its nutritional value. To get
                 started, upload a picture of your food. For more accurate results,
                 make sure you have the food item on a plate. There is also an option
                 to enter the plate size below.</p>
-        </Drawer>}
+        </Drawer>
+        {/* End of Drawer */}
 
-        
-        <div className="flex flex-col justify-center items-start min-h-screen px-8 lg:px-64 dark:bg-gray-800">
+
           <div className="flex justify-start items-center w-full">
             <div className="mr-4">
               <img src={logo} alt="FoodSnap logo" className="h-auto max-w-full" />
