@@ -104,7 +104,7 @@ function Home() {
         {isLoading && (<div className="Loading">
               <div role="status">
                 <svg aria-hidden="true"
-                     className="inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
+                     className="ml-5 inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
                      viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                       d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
@@ -130,16 +130,16 @@ function Home() {
 
         {/*Header text*/}
         <div className="flex-col justify-center items-center min-h-screen px-8 lg:px-64 -mt-5">
-          <div className="mt-10 -mb-12 flex-none">
+          <div className="mt-5 -mb-12 flex-none">
             <img src={logo} alt="FoodSnap logo" className="h-auto max-w-full scale-50" />
           </div>
           <div className=" flex-col flex justify-center items-center w-full">
             <div>
               <h1 className="-mt-5 ml-12 flex items-center text-center mb-4 text-6xl font-normal leading-none tracking-tight text-gray-900 dark:text-white">
                 <span className = "flex-row text-center text-transparent bg-clip-text bg-opacity-50 bg-gradient-to-r from-[color:var(--header-gradient-first-light)] to-[color:var(--header-gradient-last-light)] dark:from-[color:var(--header-gradient-first-dark)] dark:to-[color:var(--header-gradient-last-dark)]"> FoodSnap.</span> <span
-                  className="font-sans mb-6 flex-inline bg-[color:var(--badge-bg-light)] dark:bg-[color:var(--badge-bg-dark)] text-[color:var(--badge-text-light)] dark:text-[color:var(--badge-text-dark)]  text-xs font-semibold -ml-2 mr-2 px-2.5 py-0.5 rounded">ALPHA</span>
+                  className="font-sans mb-6 flex-inline bg-[color:var(--badge-bg-light)] dark:bg-[color:var(--badge-bg-dark)] text-[color:var(--badge-text-light)] dark:text-[color:var(--badge-text-dark)]  text-xs font-semibold -ml-3 mr-2 px-2.5 py-0.5 rounded">ALPHA</span>
               </h1>
-              <p className="mb-4 text-center text-l font-bold text-[color:var(--h1-light)] dark:text-[color:var(--h1-dark)]">Smart<span
+              <p className="-ml-2 mb-4 text-center text-l font-bold text-[color:var(--h1-light)] dark:text-[color:var(--h1-dark)]">Smart<span
                   className="text-transparent bg-clip-text bg-opacity-50 bg-gradient-to-r from-[color:var(--gradient-first-light)] to-[color:var(--gradient-last-light)] dark:from-[color:var(--gradient-first-dark)] dark:to-[color:var(--gradient-last-dark)] "> AI-powered</span> calorie estimation</p>
               <p className="mb-6 text-sm font-normal text-center text-[color:var(--p-light)] dark:text-[color:var(--p-dark)] lg:text-xl sm:px-16 xl:px-48">
               </p>
@@ -148,7 +148,7 @@ function Home() {
           {/* End of Header text */}
 
           {/*Plate input*/}
-          <div className = "flex flex-col justify-center items-center block">
+          <div className = "flex flex-col justify-center items-center block -ml-4">
           <form onSubmit={handleSubmit} data-testid="upload-form" className="flex flex-col justify-center items-center mt-4">
             <div className="w-full justify-center text-left">
               <label htmlFor="plate-value" className="justify-left block mb-2 text-sm font-medium text-[color:var(--label-txt-light)] dark:text-[color:var(--label-txt-dark)]">
@@ -163,7 +163,7 @@ function Home() {
                     id="plate-value"
                     className={`${
                         isValidInput
-                            ? 'focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:border-green-500 w-full block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400'
+                            ? 'focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:border-green-500 w-90 block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400'
                             : 'focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:border-red-600 w-full bg-red-50 border border-red-500 text-red-900 placeholder-red-700 dark:text-red-500 dark:placeholder-red-500'
                     } text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-green-500`}
                     placeholder="Default: 25cm"
@@ -177,11 +177,11 @@ function Home() {
                           d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/>
                   </svg>
                   <span className="w-max group-hover:scale-100 absolute z-10 invisible bg-[color:var(--tooltip-background-light)] dark:bg-[color:var(--tooltip-background-dark)] text-[color:var(--tooltip-text-light)] dark:text-[color:var(--tooltip-text-dark)] text-xs font-medium rounded-lg shadow-sm tooltip p-2.5 -mt-8 -top-5 right-0">
-                    Please enter a value between 10 and 40
+                    Please enter a value between 10 and 40 cm
                   </span>
                   {!isValidInput && (
                       <span className="w-max group-hover:scale-100 absolute z-10 visible bg-[color:var(--tooltip-background-light)] dark:bg-[color:var(--tooltip-background-dark)] text-[color:var(--tooltip-text-light)] dark:text-[color:var(--tooltip-text-dark)] text-xs font-medium rounded-lg shadow-sm tooltip p-2.5 -mt-8 -top-5 right-0">
-                        Please enter a value between 10 and 40
+                        Please enter a value between 10 and 40 cm
                       </span>
                   )}
                 </div>
@@ -207,7 +207,7 @@ function Home() {
                 <button
                     className="relative inline-flex items-center justify-center p-0.5  mb-2 mr-2 text-l font-medium text-[color:var(--button-text-light)] dark:text-[color:var(--button-text-dark)] rounded-lg group group-hover:from-pink-500 group-hover:to-orange-400 hover:text-[color:var(--button-text-light)] hover:dark:text-[color:var(--button-text-dark)]  transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95">
                       <span
-                          className="relative px-8 font-bold text-lg py-2.5 transition-all ease-in duration-75 bg-[color:var(--button-background-light)] dark:bg-[color:var(--button-background-dark)] rounded-md group-hover:bg-opacity-0">
+                          className="mb-5 relative px-8 font-bold text-lg py-2.5 transition-all ease-in duration-75 bg-[color:var(--button-background-light)] dark:bg-[color:var(--button-background-dark)] rounded-md group-hover:bg-opacity-0">
                           Estimate!
                       </span>
                 </button>

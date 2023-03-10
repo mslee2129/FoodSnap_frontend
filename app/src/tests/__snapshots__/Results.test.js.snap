@@ -3,19 +3,107 @@
 exports[`Home Matches DOM Snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="App"
+    class="flex-auto items-center justify-center bg-[color:var(--bg-light)] dark:bg-[color:var(--bg-dark)] min-h-screen min-w-screen overflow-x-hidden overflow-y-auto overscroll-none App"
   >
     <header
-      class="App-header"
+      class="flex flex-col min-h-screen min-w-screen flex-grow font-sans mt-5 text-align App-header bg-[color:var(--bg-light)] dark:bg-[color:var(--bg-dark)] overflow-x-hidden overscroll-none min-w-screen min-h-screen"
     >
-      <h1>
-        No Result Available
-      </h1>
+      <style>
+        @import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Tilt+Warp&display=swap);
+      </style>
       <button
-        class="Button"
+        class="fixed items-center justify-center top-1 right-0 z-10 text-[color:var(--sidebar-button-light)] dark:text-[color:var(--sidebar-button-dark)] bg-transparent rounded-lg text-sm px-5 py-5 mr-2 mb-2"
+        type="button"
       >
-        Try Again
+        <svg
+          class="w-7 h-7"
+          fill="currentColor"
+          stroke="currentColor"
+          stroke-width="3"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </button>
+      <main
+        class="fixed overflow-y-scroll overflow-hidden z-10 inset-0 transform ease-in-out transition-all delay-50 duration-500 opacity-0 translate-x-full"
+        style="z-index: 50;"
+      >
+        <div
+          class="absolute inset-0 bg-gray-500 opacity-75"
+        />
+        <div
+          class="w-screen max-w-lg right-0 bg-[color:var(--sidebar-bg-light)] dark:bg-[color:var(--sidebar-bg-dark)] h-full w-full absolute right-0transform translate-x-full ease-in"
+          style="z-index: 50;"
+        >
+          <div
+            class="flex items-center justify-between m-5"
+          >
+            <h1
+              class="text-xl font-semibold text-[color:var(--sidebar-h1-light)] dark:text-[color:var(--sidebar-h1-dark)]"
+            >
+              Welcome to FoodSnap!
+            </h1>
+            <button
+              aria-label="Close"
+              class="text-[color:var(--sidebar-p-light)] dark:text-[color:var(--sidebar-p-dark)] focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6 fill-current text-[color:var(--sidebar-button-light)] dark:text-[color:var(--sidebar-button-dark)]"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="heroicon-ui"
+                  d="M6.7 5.3a1 1 0 0 0-1.4 1.4L10.6 12l-5.3 5.3a1 1 0 1 0 1.4 1.4L12 13.4l5.3 5.3a1 1 0 0 0 1.4-1.4L13.4 12l5.3-5.3a1 1 0 0 0-1.4-1.4L12 10.6l-5.3-5.3z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-col m-5"
+          />
+        </div>
+        <div
+          class=" w-screen h-full cursor-pointer z-20"
+        />
+      </main>
+      <div
+        class="h-screen flex flex-col absolute inset-0 align-middle place-items-center justify-center items-center"
+      >
+        <div
+          class="flex -mt-20 place-items-center align-middle text-center text-3xl flex-col justify-center items-center text-[color:var(--h1-light)] dark:text-[color:var(--h1-dark)]"
+        >
+          <h1
+            class="flex justify-center text-center text-4xl"
+          >
+            No Results Found
+          </h1>
+          <p
+            class="flex mt-10 mx-5 font-sans text-xl"
+          >
+            We failed to identify a food item in your picture. Please make sure that the picture includes a food item, and that the picture is taken from above.
+          </p>
+        </div>
+        <div
+          class="justify-center"
+        >
+          <button
+            class="mt-10 p-0.5 text-l font-medium text-[color:var(--button-text-light)] dark:text-[color:var(--button-text-dark)] rounded-lg group group-hover:from-pink-500 group-hover:to-orange-400 hover:text-[color:var(--button-text-light)] hover:dark:text-[color:var(--button-text-dark)]  transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+          >
+            <span
+              class="px-8 font-bold text-lg py-2.5 transition-all ease-in duration-75 bg-[color:var(--button-background-light)] dark:bg-[color:var(--button-background-dark)] rounded-md group-hover:bg-opacity-0"
+            >
+              Try Again
+            </span>
+          </button>
+        </div>
+      </div>
     </header>
   </div>
 </DocumentFragment>
