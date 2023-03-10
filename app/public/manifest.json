@@ -3,19 +3,14 @@
   "name": "FoodSnap Application",
   "icons": [
     {
-      "src": "favicon.png",
-      "sizes": "64x64",
-      "type": "image/png"
-    },
-    {
-      "src": "logo_192.png",
-      "type": "image/png",
+      "src": "logo_192.svg",
+      "type": "image/svg",
       "sizes": "192x192"
     },
     {
-      "src": "logo_512.png",
+      "src": "logo_1000px_compressed.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "1000x1000"
     }
   ],
   "start_url": ".",
