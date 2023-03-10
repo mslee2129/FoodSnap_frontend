@@ -87,7 +87,7 @@ exports[`Home Matches DOM Snapshot 1`] = `
           <p
             class="flex mt-10 mx-5 font-sans text-xl"
           >
-            We failed to identify a food item in your picture. Please make sure that the picture includes a food item, and that the picture is taken from above.
+            We failed to identify a food item in your picture. Please make sure that the picture includes a food item, and that the picture is taken from above. If you are uploading a photo, please upload a .png or a.jpg.
           </p>
         </div>
         <div
