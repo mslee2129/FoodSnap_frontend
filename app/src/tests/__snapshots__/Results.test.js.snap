@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Matches DOM Snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      <h1>
+        No Result Available
+      </h1>
+      <button
+        class="Button"
+      >
+        Try Again
+      </button>
+    </header>
+  </div>
+</DocumentFragment>
+`;

@@ -7,16 +7,17 @@
   pointer-events: none;
 }
 
-.App-header {
-  min-height: 94vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  font-size: calc(10px + 2vmin);
-  color: #798777;
-}
+/*.App-header {*/
+/*  min-height: 94vh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  text-align: left;*/
+/*  font-size: calc(10px + 2vmin);*/
+/*  color: #798777;*/
+/*}*/
+
 table {
   width: 100%;
   margin-bottom: 20px;
@@ -27,18 +28,26 @@ th, td {
   width: 50%;
 }
 
-caption {
-  font-size: 24;
-  font-weight: bold;
-}
+/*caption {*/
+/*  font-size: 24;*/
+/*  font-weight: bold;*/
+/*}*/
 
-pre {
-  font-family: "Open Sans Bold'", sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  /*color: #333;*/
-  padding: 10px;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  font-weight: normal;
+/*pre {*/
+/*  font-family: "Open Sans Bold'", sans-serif;*/
+/*  font-size: 14px;*/
+/*  line-height: 1.5;*/
+/*  !*color: #333;*!*/
+/*  padding: 10px;*/
+/*  overflow-x: auto;*/
+/*  white-space: pre-wrap;*/
+/*  font-weight: normal;*/
+/*}*/
+
+/*header-font {*/
+/*  font-size: 16px;*/
+/*}*/
+
+h1 {
+  font-family: 'Tilt Warp', sans-serif;
 }

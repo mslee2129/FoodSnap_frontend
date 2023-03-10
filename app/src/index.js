@@ -5,14 +5,17 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import "./styles.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <div className="bg-[color:var(--bg-light)] dark:bg-[color:var(--bg-dark)] min-h-screen min-w-screen">
+        <BrowserRouter>
+            <App />
+      </BrowserRouter>
+    </div>
   </React.StrictMode>
 );
 
