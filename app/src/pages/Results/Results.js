@@ -17,7 +17,7 @@ function Results () {
             "\nDid you know we can give more accurate results if the food is on a plate? 🍽",
         "VISION_DEFAULT" : "We're working hard to add more dishes to our system! 🔧" +
             "\nBut here are nutritional values for a 100g serving 😋",
-        "NO_FOOD_DETECTED" : "We didn't detect any food 😢 Please try again!"
+        "NO_FOOD_DETECTED" : "We failed to identify a food item in your picture. 😢 Please make sure that the picture includes a food item, and that the picture is taken from above. Please try again!"
     }
 
     useEffect(() => {
@@ -77,7 +77,7 @@ function Results () {
                 </button>
                 <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
                 </Drawer>
-                <div className="text-center text-3xl flex-col justify-center items-center text-[color:var(--h1-light)] dark:text-[color:var(--h1-dark)]">
+                <div className="text-center text-4xl flex-col justify-center items-center text-[color:var(--h1-light)] dark:text-[color:var(--h1-dark)]">
                     <h1>Results</h1>
                 </div>
                 <h4 className="content-center px-10 text-m relative text-[color:var(--p-light)] dark:text-[color:var(--p-dark)] py-5">{model_codes[location.state.responseData.model_code]}</h4>
@@ -132,26 +132,3 @@ function Results () {
 }
 
 export default Results
-
-
-{/* <table key = {index}> */}
-                    
-                    
-                    {/* <tr>
-                        <td>Calories</td>
-                        <td>{result.nutrition ? result.nutrition.ENERC_KCAL : ''} KCal</td>
-                    </tr>
-                    <tr>
-                        <td>Carbohydrates</td>
-                        <td>{result.nutrition ? result.nutrition.CHOCDF : ''} g</td>
-                    </tr>
-                    <tr>
-                        <td>Protein</td>
-                        <td>{result.nutrition ? result.nutrition.PROCNT : ''} g</td>
-                    </tr>
-                    <tr>
-                        <td>Fat</td>
-                        <td>{result.nutrition ? result.nutrition.FAT : ''} g</td>
-                    </tr>
-                    
-                </table> */}
