@@ -47,7 +47,7 @@ function Results () {
                 <div className="h-screen flex flex-col absolute inset-0 align-middle place-items-center justify-center items-center">
                     <div className="flex -mt-20 place-items-center align-middle text-center text-3xl flex-col justify-center items-center text-[color:var(--h1-light)] dark:text-[color:var(--h1-dark)]">
                         <h1 className="flex justify-center text-center text-4xl">No Results Found</h1>
-                        <p className="flex mt-10 mx-5 font-sans text-xl">We failed to identify a food item in your picture. Please make sure that the picture includes a food item, and that the picture is taken from above.</p>
+                        <p className="flex mt-10 mx-5 font-sans text-xl">We failed to identify a food item in your picture. Please make sure that the picture includes a food item, and that the picture is taken from above. If you are uploading a photo, please upload a .png or a.jpg.</p>
                     </div>
                     <div className ="justify-center">
                         <button
