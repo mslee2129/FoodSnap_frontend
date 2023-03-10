@@ -148,7 +148,7 @@ function Home() {
           {/* End of Header text */}
 
           {/*Plate input*/}
-          <div className = "flex flex-col justify-center items-center block">
+          <div className = "flex flex-col justify-center items-center block -ml-4">
           <form onSubmit={handleSubmit} data-testid="upload-form" className="flex flex-col justify-center items-center mt-4">
             <div className="w-full justify-center text-left">
               <label htmlFor="plate-value" className="justify-left block mb-2 text-sm font-medium text-[color:var(--label-txt-light)] dark:text-[color:var(--label-txt-dark)]">
