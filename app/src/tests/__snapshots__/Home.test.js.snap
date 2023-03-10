@@ -77,7 +77,7 @@ exports[`Home Matches DOM Snapshot 1`] = `
         class="flex-col justify-center items-center min-h-screen px-8 lg:px-64 -mt-5"
       >
         <div
-          class="mt-10 -mb-12 flex-none"
+          class="mt-5 -mb-12 flex-none"
         >
           <img
             alt="FoodSnap logo"
@@ -99,13 +99,13 @@ exports[`Home Matches DOM Snapshot 1`] = `
               </span>
                
               <span
-                class="font-sans mb-6 flex-inline bg-[color:var(--badge-bg-light)] dark:bg-[color:var(--badge-bg-dark)] text-[color:var(--badge-text-light)] dark:text-[color:var(--badge-text-dark)]  text-xs font-semibold -ml-2 mr-2 px-2.5 py-0.5 rounded"
+                class="font-sans mb-6 flex-inline bg-[color:var(--badge-bg-light)] dark:bg-[color:var(--badge-bg-dark)] text-[color:var(--badge-text-light)] dark:text-[color:var(--badge-text-dark)]  text-xs font-semibold -ml-3 mr-2 px-2.5 py-0.5 rounded"
               >
                 ALPHA
               </span>
             </h1>
             <p
-              class="mb-4 text-center text-l font-bold text-[color:var(--h1-light)] dark:text-[color:var(--h1-dark)]"
+              class="-ml-2 mb-4 text-center text-l font-bold text-[color:var(--h1-light)] dark:text-[color:var(--h1-dark)]"
             >
               Smart
               <span
@@ -121,7 +121,7 @@ exports[`Home Matches DOM Snapshot 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col justify-center items-center block"
+          class="flex flex-col justify-center items-center block -ml-4"
         >
           <form
             class="flex flex-col justify-center items-center mt-4"
@@ -140,7 +140,7 @@ exports[`Home Matches DOM Snapshot 1`] = `
                 class="flex items-center"
               >
                 <input
-                  class="focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:border-green-500 w-full block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"
+                  class="focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:border-green-500 w-90 block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"
                   id="plate-value"
                   max="40"
                   min="10"
@@ -169,7 +169,7 @@ exports[`Home Matches DOM Snapshot 1`] = `
                   <span
                     class="w-max group-hover:scale-100 absolute z-10 invisible bg-[color:var(--tooltip-background-light)] dark:bg-[color:var(--tooltip-background-dark)] text-[color:var(--tooltip-text-light)] dark:text-[color:var(--tooltip-text-dark)] text-xs font-medium rounded-lg shadow-sm tooltip p-2.5 -mt-8 -top-5 right-0"
                   >
-                    Please enter a value between 10 and 40
+                    Please enter a value between 10 and 40 cm
                   </span>
                 </div>
               </div>
@@ -205,7 +205,7 @@ exports[`Home Matches DOM Snapshot 1`] = `
                 class="relative inline-flex items-center justify-center p-0.5  mb-2 mr-2 text-l font-medium text-[color:var(--button-text-light)] dark:text-[color:var(--button-text-dark)] rounded-lg group group-hover:from-pink-500 group-hover:to-orange-400 hover:text-[color:var(--button-text-light)] hover:dark:text-[color:var(--button-text-dark)]  transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95"
               >
                 <span
-                  class="relative px-8 font-bold text-lg py-2.5 transition-all ease-in duration-75 bg-[color:var(--button-background-light)] dark:bg-[color:var(--button-background-dark)] rounded-md group-hover:bg-opacity-0"
+                  class="mb-5 relative px-8 font-bold text-lg py-2.5 transition-all ease-in duration-75 bg-[color:var(--button-background-light)] dark:bg-[color:var(--button-background-dark)] rounded-md group-hover:bg-opacity-0"
                 >
                   Estimate!
                 </span>
