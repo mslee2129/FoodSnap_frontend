@@ -1,0 +1,133 @@
+:root {
+    --light-color: theme('colors.gray.700');
+    --dark-color: theme('colors.gray.400');
+
+    --transparent: theme('colors.transparent');
+
+    --bg-light: theme('colors.amber.50');
+    --bg-dark: theme('colors.slate.800');
+    --h1-light: theme('colors.darktealgray1');
+    --h1-dark: theme('colors.white');
+    --h2-light: theme('colors.cyan.700');
+    --h2-dark: theme('colors.white');
+    --p-light: theme('colors.darktealgray1');
+    --p-dark: theme('colors.white');
+
+    /* alpha badge */
+    --badge-text-light: theme('colors.white');
+    --badge-text-dark: theme('colors.rustyred');
+    --badge-bg-light: theme('colors.oxfordblue');
+    --badge-bg-dark: theme('colors.gray.200');
+
+    /* Labels above input fields */
+    --label-txt-light: theme('colors.darktealgray1');
+    --label-txt-dark: theme('colors.white');
+
+    /*Gradient text colors*/
+    --gradient-first-light: theme('colors.darktealgray1');
+    --gradient-last-light: theme('colors.darktealgray1');
+    --gradient-first-dark: theme('colors.white');
+    --gradient-last-dark: theme('colors.white');
+    --header-gradient-first-light: theme('colors.darkteal');
+    --header-gradient-last-light: theme('colors.oxfordblue');
+    --header-gradient-first-dark: theme('colors.white');
+    --header-gradient-last-dark: theme('colors.white');
+
+    /*sidebar elements*/
+    --sidebar-bg-light: theme('colors.orange.200');
+    --sidebar-bg-dark: theme('colors.slate.700');
+    --sidebar-h1-light: theme('colors.darkteal');
+    --sidebar-h1-dark: theme('colors.white');
+    --sidebar-p-light: theme('colors.darkteal');
+    --sidebar-p-dark: theme('colors.white');
+    --sidebar-button-light: theme('colors.rustyred');
+    --sidebar-button-dark: theme('colors.bittersweetdark');
+
+    /*upload button elements*/
+    --button-background-light: theme('colors.rustyred');
+    --button-background-dark: theme('colors.bittersweetdark');
+    --button-text-light: theme('colors.amber.50');
+    --button-text-dark: theme('colors.white');
+
+    /*tooltip elements*/
+    --tooltip-background-light: theme('colors.darktealgray1');
+    --tooltip-background-dark: theme('colors.charcoal');
+    --tooltip-text-light: theme('colors.white');
+    --tooltip-text-dark: theme('colors.white');
+
+    /* Table elements*/
+    --table-h-bg-light: theme('colors.blue.50');
+    --table-h-txt-light: theme('colors.darktealgray1');
+    --table-results-txt-light: theme('colors.darktealgray1');
+
+    --table-b-bg-light: theme('colors.blue.50');
+    --table-b-txt-light: theme('colors.darktealgray1');
+
+    --table-b-bg-light-hover: theme('colors.darktealgray2');
+
+    --table-b-bg-dark: theme('colors.darktealgray2');
+    --table-b-txt-dark: theme('colors.charcoal');
+
+    --table-h-bg-dark: theme('colors.darktealgray2');
+    --table-h-txt-dark: theme('colors.charcoal');
+    --table-results-txt-dark: theme('colors.charcoal');
+
+    --table-b-bg-dark-hover: theme('colors.stone.200');
+
+
+}
+
+
+
+
+
+/*template*/
+/*:root {*/
+/*    --light-color: theme('colors.gray.700');*/
+/*    --dark-color: theme('colors.gray.400');*/
+
+/*    --bg-light: theme('colors.amber.50');*/
+/*    --bg-dark: theme('colors.red.100');*/
+/*    --h1-light: theme('colors.amber.600');*/
+/*    --h1-dark: theme('colors.gray.400');*/
+/*    --h2-light: theme('colors.cyan.700');*/
+/*    --h2-dark: theme('colors.gray.400');*/
+/*    --p-light: theme('colors.burntorange');*/
+/*    --p-dark: theme('colors.gray.400');*/
+
+/*    !* Labels above input fields *!*/
+/*    --label-txt-light: theme('colors.gray.400');*/
+/*    --label-txt-dark: theme('colors.gray.400');*/
+
+/*    !*Gradient text colors*!*/
+/*    --gradient-first-light: theme('colors.amber.600');*/
+/*    --gradient-last-light: theme('colors.amber.600');*/
+/*    --gradient-first-dark: theme('colors.blue.400');*/
+/*    --gradient-last-dark: theme('colors.red.800');*/
+/*    --header-gradient-first-light: theme('colors.ferngreen');*/
+/*    --header-gradient-last-light: theme('colors.drabbrown');*/
+/*    --header-gradient--first-dark: theme('colors.ferngreen');*/
+/*    --header-gradient--last-dark: theme('colors.ferngreen');*/
+
+/*    !*sidebar elements*!*/
+/*    --sidebar-bg-light: theme('colors.amber.600');*/
+/*    --sidebar-bg-dark: theme('colors.red.800');*/
+/*    --sidebar-h1-light: theme('colors.drabbrown');*/
+/*    --sidebar-h1-dark: theme('colors.red.800');*/
+/*    --sidebar-p-light: theme('colors.blue.800');*/
+/*    --sidebar-p-dark: theme('colors.blue.800');*/
+/*    --sidebar-button-light: theme('colors.blue.800');*/
+/*    --sidebar-button-dark: theme('colors.blue.800');*/
+
+/*    !*upload button elements*!*/
+/*    --button-background-light: theme('colors.amber.600');*/
+/*    --button-background-dark: theme('colors.gray.700');*/
+/*    --button-text-light: theme('colors.amber.50');*/
+/*    --button-text-dark: theme('colors.red.700');*/
+
+/*    !*tooltip elements*!*/
+/*    --tooltip-background-light: theme('colors.gray.900');*/
+/*    --tooltip-background-dark: theme('colors.gray.700');*/
+/*    --tooltip-text-light: theme('colors.red.700');*/
+/*    --tooltiptext-dark: theme('colors.red.700');*/
+/*}*/
